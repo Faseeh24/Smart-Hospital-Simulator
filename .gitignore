@@ -8,7 +8,7 @@
 *.elf
 
 # Linker output
-*.ilk
+*.ilkhs
 *.map
 *.exp
 
@@ -55,4 +55,4 @@ dkms.conf
 *.dwo
 
 
-test/
+build/
