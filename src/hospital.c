@@ -1,45 +1,27 @@
-#include <sys/shm.h>
-#include <sys/ipc.h>
+#include "hospital.h"
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "types.h"
-#include "config.h"
 
-static int shmid = -1;
+void init_hospital(HospitalState* hs) {
+    hs->beds_available = MAX_BEDS;
+    
+    for(int i=0; i<MAX_DOCTORS; i++)
+        hs->doctor_busy[i] = 0;
 
-HospitalState* init_hospital_state() {
-    shmid = shmget(SHM_KEY, sizeof(HospitalState), IPC_CREAT | 0666);
-    if (shmid == -1) {
-        perror("shmget failed");
-        exit(1);
-    }
-    HospitalState* hs = (HospitalState*) shmat(shmid, NULL, 0);
-    if (hs == (HospitalState*) -1) {
-        perror("shmat failed");
-        exit(1);
-    }
-    // Initialize the hospital state
-    hs->total_beds = 10;
-    hs->available_beds = 10;
-    hs->total_doctors = MAX_DOCTORS;
-    memset(hs->doctor_busy, 0, sizeof(hs->doctor_busy));
-    hs->total_equipments = MAX_EQUIPMENT;
-    hs->available_equipments = MAX_EQUIPMENT;
-    hs->treated_patients = 0;
-    return hs;
-}
-
-void save_hospital_state(HospitalState* hs) {
-    // Detach the shared memory segment
-    if (shmdt(hs) == -1) {
-        perror("shmdt failed");
+    for(int i=0; i<MAX_BEDS; i++) {
+        hs->beds[i].occupied = 0;
+        hs->beds[i].patient_id = -1;
     }
 }
 
-void close_shared_memory(HospitalState* hs) {
-    // Remove the shared memory segment
-    if (shmctl(shmid, IPC_RMID, NULL) == -1) {
-        perror("shmctl failed");
-    }
+void print_hospital(HospitalState* hs) {
+    printf("\n--- HOSPITAL STATE ---\n");
+    printf("Beds available: %d\n", hs->beds_available);
+
+    printf("Doctors:\n");
+    for(int i=0; i<MAX_DOCTORS; i++)
+        printf("Doctor %d: %s\n", i, hs->doctor_busy[i] ? "Busy" : "Free");
+
+    printf("Beds:\n");
+    for(int i=0; i<MAX_BEDS; i++)
+        printf("Bed %d: %s\n", i, hs->beds[i].occupied ? "Occupied" : "Empty");
 }
