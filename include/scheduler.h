@@ -1,39 +1,23 @@
 #ifndef SCHEDULER_H
 #define SCHEDULER_H
 
-#include "types.h"
-#include <stddef.h> // For NULL or size_t
+#include "patient.h"
+#include "message_queue.h"
 
-typedef struct {
-    Node *head;
-    Node *tail;
-    int count;
-} ReadyQueue;
+// Scheduler queue node
+typedef struct SchedulerNode {
+    Patient *patient;
+    time_t enqueue_time;
+    struct SchedulerNode *next;
+} SchedulerNode;
 
-// --- 4. Ready Queue Management Functions ---
+// Function declarations - FCFS Queue operations
+void enqueue_patient(SchedulerNode **queue, Patient *patient);
+Patient* dequeue_patient(SchedulerNode **queue);
+int is_queue_empty(SchedulerNode *queue);
 
-// Initializes a new, empty ready queue
-void initialize_queue(ReadyQueue *q);
+// Scheduler functions
+void fcfs_scheduler(SchedulerNode **ready_queue, int msg_queue_id);
+void round_robin_message_scheduler(int msg_queue_id, Patient **all_patients, int num_patients);
 
-// Creates a Node from Patient data and adds it to the ready queue (FCFS behavior)
-void enqueue_patient(ReadyQueue *q, Patient patient_data);
-
-// Removes the Patient Node from the head of the queue
-Patient dequeue_patient(ReadyQueue *q);
-
-// Prints the contents of the ready queue
-void display_queue(const ReadyQueue *q);
-
-
-// --- 5. Scheduling Algorithm Functions ---
-
-// Simulates First-Come, First-Served (FCFS) scheduling
-void run_fcfs(ReadyQueue *q);
-
-// Simulates Non-Preemptive Shortest Job First (SJF) scheduling
-void run_sjf_non_preemptive(ReadyQueue *q);
-
-// Simulates Round Robin (RR) scheduling
-void run_round_robin(ReadyQueue *q, int quantum);
-
-#endif
+#endif // SCHEDULER_H

@@ -1,0 +1,254 @@
+=== Hospital Simulation Log ===
+Started at: Fri Dec 12 16:32:37 2025
+
+[2025-12-12 16:32:37] [INFO] === Smart Hospital Simulator Started ===
+[2025-12-12 16:32:37] [INFO] Shared memory created with ID: 2
+[2025-12-12 16:32:37] [INFO] Hospital state initialized in shared memory
+[2025-12-12 16:32:37] [INFO] Message queue created with ID: 2
+[2025-12-12 16:32:37] [INFO] Created semaphore /sem_emergency with value 2
+[2025-12-12 16:32:37] [INFO] Created semaphore /sem_opd with value 3
+[2025-12-12 16:32:37] [INFO] Created semaphore /sem_radiology with value 1
+[2025-12-12 16:32:37] [INFO] Created semaphore /sem_pharmacy with value 2
+[2025-12-12 16:32:37] [INFO] Created semaphore /sem_billing with value 1
+[2025-12-12 16:32:37] [INFO] Department Emergency process started (PID: 83699)
+[2025-12-12 16:32:37] [INFO] Department OPD process started (PID: 83700)
+[2025-12-12 16:32:37] [INFO] Department Radiology process started (PID: 83701)
+[2025-12-12 16:32:37] [INFO] Department Pharmacy process started (PID: 83702)
+[2025-12-12 16:32:37] [INFO] Department Billing process started (PID: 83703)
+[2025-12-12 16:32:38] [INFO] Created Patient 1 with Route Type 0
+[2025-12-12 16:32:38] [INFO] Created Patient 2 with Route Type 0
+[2025-12-12 16:32:38] [INFO] Created Patient 3 with Route Type 0
+[2025-12-12 16:32:38] [INFO] Created Patient 4 with Route Type 1
+[2025-12-12 16:32:38] [INFO] Created Patient 5 with Route Type 1
+[2025-12-12 16:32:38] [INFO] Created Patient 6 with Route Type 2
+[2025-12-12 16:32:38] [INFO] Created Patient 7 with Route Type 2
+[2025-12-12 16:32:38] [INFO] Created Patient 8 with Route Type 3
+[2025-12-12 16:32:38] [INFO] Created Patient 9 with Route Type 3
+[2025-12-12 16:32:38] [INFO] Created Patient 10 with Route Type 0
+[2025-12-12 16:32:38] [INFO] Created Patient 11 with Route Type 1
+[2025-12-12 16:32:38] [INFO] Created Patient 12 with Route Type 3
+[2025-12-12 16:32:38] [INFO] Patient 1 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 2 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 3 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 4 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 5 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 6 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 7 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 8 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 9 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 10 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 11 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Patient 12 arrived at hospital
+[2025-12-12 16:32:38] [INFO] Sent Patient 1 to OPD department
+[2025-12-12 16:32:38] [INFO] Department OPD: Patient 1 arrived
+[2025-12-12 16:32:38] [INFO] Department OPD: Treating Patient 1 (waited 0.00s)
+[2025-12-12 16:32:38] [INFO] Sent Patient 2 to OPD department
+[2025-12-12 16:32:38] [INFO] Sent Patient 3 to OPD department
+[2025-12-12 16:32:39] [INFO] Sent Patient 4 to Emergency department
+[2025-12-12 16:32:39] [INFO] Department Emergency: Patient 4 arrived
+[2025-12-12 16:32:39] [INFO] Department Emergency: Treating Patient 4 (waited 0.00s)
+[2025-12-12 16:32:39] [INFO] Sent Patient 5 to Emergency department
+[2025-12-12 16:32:39] [INFO] Sent Patient 6 to Radiology department
+[2025-12-12 16:32:39] [INFO] Department Radiology: Patient 6 arrived
+[2025-12-12 16:32:39] [INFO] Department Radiology: Treating Patient 6 (waited 0.00s)
+[2025-12-12 16:32:39] [INFO] Sent Patient 7 to Radiology department
+[2025-12-12 16:32:39] [INFO] Sent Patient 8 to Pharmacy department
+[2025-12-12 16:32:39] [INFO] Department Pharmacy: Patient 8 arrived
+[2025-12-12 16:32:39] [INFO] Department Pharmacy: Treating Patient 8 (waited 0.00s)
+[2025-12-12 16:32:39] [INFO] Sent Patient 9 to Pharmacy department
+[2025-12-12 16:32:39] [INFO] Sent Patient 10 to OPD department
+[2025-12-12 16:32:39] [INFO] Department OPD: Patient 1 treatment complete (1.00s)
+[2025-12-12 16:32:39] [INFO] Department OPD: Patient 2 arrived
+[2025-12-12 16:32:39] [INFO] Department OPD: Treating Patient 2 (waited 0.00s)
+[2025-12-12 16:32:39] [INFO] Sent Patient 11 to Emergency department
+[2025-12-12 16:32:39] [INFO] Sent Patient 12 to Pharmacy department
+[2025-12-12 16:32:39] [INFO] Round Robin message scheduler started
+[2025-12-12 16:32:40] [INFO] Department Emergency: Patient 4 treatment complete (1.00s)
+[2025-12-12 16:32:40] [INFO] Department Emergency: Patient 5 arrived
+[2025-12-12 16:32:40] [INFO] Department Emergency: Treating Patient 5 (waited 0.00s)
+[2025-12-12 16:32:40] [INFO] Sent Patient 1 to Pharmacy department
+[2025-12-12 16:32:40] [INFO] Sent Patient 4 to Radiology department
+[2025-12-12 16:32:40] [INFO] Department Radiology: Patient 6 treatment complete (1.00s)
+[2025-12-12 16:32:40] [INFO] Department Radiology: Patient 7 arrived
+[2025-12-12 16:32:40] [INFO] Department Radiology: Treating Patient 7 (waited 0.00s)
+[2025-12-12 16:32:40] [INFO] Sent Patient 6 to OPD department
+[2025-12-12 16:32:40] [INFO] Department Pharmacy: Patient 8 treatment complete (1.00s)
+[2025-12-12 16:32:40] [INFO] Department Pharmacy: Patient 9 arrived
+[2025-12-12 16:32:40] [INFO] Department Pharmacy: Treating Patient 9 (waited 0.00s)
+[2025-12-12 16:32:40] [INFO] Sent Patient 8 to Billing department
+[2025-12-12 16:32:40] [INFO] Department Billing: Patient 8 arrived
+[2025-12-12 16:32:40] [INFO] Department Billing: Treating Patient 8 (waited 0.00s)
+[2025-12-12 16:32:41] [INFO] Department Billing: Patient 8 treatment complete (1.00s)
+[2025-12-12 16:32:41] [INFO] Patient 8 completed all treatments
+[2025-12-12 16:32:42] [INFO] Department OPD: Patient 2 treatment complete (3.00s)
+[2025-12-12 16:32:42] [INFO] Department OPD: Patient 3 arrived
+[2025-12-12 16:32:42] [INFO] Department OPD: Treating Patient 3 (waited 0.00s)
+[2025-12-12 16:32:42] [INFO] Sent Patient 2 to Pharmacy department
+[2025-12-12 16:32:43] [INFO] Department Emergency: Patient 5 treatment complete (3.00s)
+[2025-12-12 16:32:43] [INFO] Department Emergency: Patient 11 arrived
+[2025-12-12 16:32:43] [INFO] Department Emergency: Treating Patient 11 (waited 0.00s)
+[2025-12-12 16:32:43] [INFO] Sent Patient 5 to Radiology department
+[2025-12-12 16:32:43] [INFO] Department Radiology: Patient 7 treatment complete (3.00s)
+[2025-12-12 16:32:43] [INFO] Department Radiology: Patient 4 arrived
+[2025-12-12 16:32:43] [INFO] Department Radiology: Treating Patient 4 (waited 0.00s)
+[2025-12-12 16:32:43] [INFO] Sent Patient 7 to OPD department
+[2025-12-12 16:32:43] [INFO] Department Pharmacy: Patient 9 treatment complete (3.00s)
+[2025-12-12 16:32:43] [INFO] Department Pharmacy: Patient 12 arrived
+[2025-12-12 16:32:43] [INFO] Department Pharmacy: Treating Patient 12 (waited 0.00s)
+[2025-12-12 16:32:43] [INFO] Sent Patient 9 to Billing department
+[2025-12-12 16:32:43] [INFO] Department Billing: Patient 9 arrived
+[2025-12-12 16:32:43] [INFO] Department Billing: Treating Patient 9 (waited 0.00s)
+[2025-12-12 16:32:44] [INFO] Department OPD: Patient 3 treatment complete (2.00s)
+[2025-12-12 16:32:44] [INFO] Department OPD: Patient 10 arrived
+[2025-12-12 16:32:44] [INFO] Department OPD: Treating Patient 10 (waited 0.00s)
+[2025-12-12 16:32:44] [INFO] Sent Patient 3 to Pharmacy department
+[2025-12-12 16:32:45] [INFO] Department Emergency: Patient 11 treatment complete (2.00s)
+[2025-12-12 16:32:45] [INFO] Sent Patient 11 to Radiology department
+[2025-12-12 16:32:45] [INFO] Department Radiology: Patient 4 treatment complete (2.00s)
+[2025-12-12 16:32:45] [INFO] Department Radiology: Patient 5 arrived
+[2025-12-12 16:32:45] [INFO] Department Radiology: Treating Patient 5 (waited 0.00s)
+[2025-12-12 16:32:45] [INFO] Sent Patient 4 to Pharmacy department
+[2025-12-12 16:32:45] [INFO] Department Pharmacy: Patient 12 treatment complete (2.00s)
+[2025-12-12 16:32:45] [INFO] Department Pharmacy: Patient 1 arrived
+[2025-12-12 16:32:45] [INFO] Department Pharmacy: Treating Patient 1 (waited 0.00s)
+[2025-12-12 16:32:45] [INFO] Sent Patient 12 to Billing department
+[2025-12-12 16:32:46] [INFO] Department Billing: Patient 9 treatment complete (3.00s)
+[2025-12-12 16:32:46] [INFO] Department Billing: Patient 12 arrived
+[2025-12-12 16:32:46] [INFO] Department Billing: Treating Patient 12 (waited 0.00s)
+[2025-12-12 16:32:46] [INFO] Patient 9 completed all treatments
+[2025-12-12 16:32:46] [INFO] Department OPD: Patient 10 treatment complete (2.00s)
+[2025-12-12 16:32:46] [INFO] Department OPD: Patient 6 arrived
+[2025-12-12 16:32:46] [INFO] Department OPD: Treating Patient 6 (waited 0.00s)
+[2025-12-12 16:32:46] [INFO] Sent Patient 10 to Pharmacy department
+[2025-12-12 16:32:47] [INFO] Department Radiology: Patient 5 treatment complete (2.00s)
+[2025-12-12 16:32:47] [INFO] Department Radiology: Patient 11 arrived
+[2025-12-12 16:32:47] [INFO] Department Radiology: Treating Patient 11 (waited 0.00s)
+[2025-12-12 16:32:47] [INFO] Sent Patient 5 to Pharmacy department
+[2025-12-12 16:32:47] [INFO] Department Pharmacy: Patient 1 treatment complete (2.00s)
+[2025-12-12 16:32:47] [INFO] Department Pharmacy: Patient 2 arrived
+[2025-12-12 16:32:47] [INFO] Department Pharmacy: Treating Patient 2 (waited 0.00s)
+[2025-12-12 16:32:47] [INFO] Sent Patient 1 to Billing department
+[2025-12-12 16:32:48] [INFO] Department Billing: Patient 12 treatment complete (2.00s)
+[2025-12-12 16:32:48] [INFO] Department Billing: Patient 1 arrived
+[2025-12-12 16:32:48] [INFO] Department Billing: Treating Patient 1 (waited 0.00s)
+[2025-12-12 16:32:48] [INFO] Patient 12 completed all treatments
+[2025-12-12 16:32:49] [INFO] Department OPD: Patient 6 treatment complete (3.00s)
+[2025-12-12 16:32:49] [INFO] Department OPD: Patient 7 arrived
+[2025-12-12 16:32:49] [INFO] Department OPD: Treating Patient 7 (waited 0.00s)
+[2025-12-12 16:32:49] [INFO] Sent Patient 6 to Billing department
+[2025-12-12 16:32:50] [INFO] Department Radiology: Patient 11 treatment complete (3.00s)
+[2025-12-12 16:32:50] [INFO] Sent Patient 11 to Pharmacy department
+[2025-12-12 16:32:50] [INFO] Department Pharmacy: Patient 2 treatment complete (3.00s)
+[2025-12-12 16:32:50] [INFO] Department Pharmacy: Patient 3 arrived
+[2025-12-12 16:32:50] [INFO] Department Pharmacy: Treating Patient 3 (waited 0.00s)
+[2025-12-12 16:32:50] [INFO] Department Billing: Patient 1 treatment complete (2.00s)
+[2025-12-12 16:32:50] [INFO] Department Billing: Patient 6 arrived
+[2025-12-12 16:32:50] [INFO] Department Billing: Treating Patient 6 (waited 0.00s)
+[2025-12-12 16:32:50] [INFO] Sent Patient 2 to Billing department
+[2025-12-12 16:32:50] [INFO] Patient 1 completed all treatments
+[2025-12-12 16:32:50] [INFO] Department OPD: Patient 7 treatment complete (1.00s)
+[2025-12-12 16:32:50] [INFO] Sent Patient 7 to Billing department
+[2025-12-12 16:32:51] [INFO] Department Pharmacy: Patient 3 treatment complete (1.00s)
+[2025-12-12 16:32:51] [INFO] Department Pharmacy: Patient 4 arrived
+[2025-12-12 16:32:51] [INFO] Department Pharmacy: Treating Patient 4 (waited 0.00s)
+[2025-12-12 16:32:51] [INFO] Sent Patient 3 to Billing department
+[2025-12-12 16:32:52] [INFO] Department Pharmacy: Patient 4 treatment complete (1.00s)
+[2025-12-12 16:32:52] [INFO] Department Pharmacy: Patient 10 arrived
+[2025-12-12 16:32:52] [INFO] Department Pharmacy: Treating Patient 10 (waited 0.00s)
+[2025-12-12 16:32:52] [INFO] Sent Patient 4 to Billing department
+[2025-12-12 16:32:53] [INFO] Department Pharmacy: Patient 10 treatment complete (1.00s)
+[2025-12-12 16:32:53] [INFO] Department Pharmacy: Patient 5 arrived
+[2025-12-12 16:32:53] [INFO] Department Pharmacy: Treating Patient 5 (waited 0.00s)
+[2025-12-12 16:32:53] [INFO] Sent Patient 10 to Billing department
+[2025-12-12 16:32:53] [INFO] Department Billing: Patient 6 treatment complete (3.00s)
+[2025-12-12 16:32:53] [INFO] Department Billing: Patient 2 arrived
+[2025-12-12 16:32:53] [INFO] Department Billing: Treating Patient 2 (waited 0.00s)
+[2025-12-12 16:32:53] [INFO] Patient 6 completed all treatments
+[2025-12-12 16:32:54] [INFO] Department Billing: Patient 2 treatment complete (1.00s)
+[2025-12-12 16:32:54] [INFO] Department Billing: Patient 7 arrived
+[2025-12-12 16:32:54] [INFO] Department Billing: Treating Patient 7 (waited 0.00s)
+[2025-12-12 16:32:54] [INFO] Patient 2 completed all treatments
+[2025-12-12 16:32:55] [INFO] Department Pharmacy: Patient 5 treatment complete (2.00s)
+[2025-12-12 16:32:55] [INFO] Department Pharmacy: Patient 11 arrived
+[2025-12-12 16:32:55] [INFO] Department Pharmacy: Treating Patient 11 (waited 0.00s)
+[2025-12-12 16:32:55] [INFO] Sent Patient 5 to Billing department
+[2025-12-12 16:32:55] [INFO] Department Billing: Patient 7 treatment complete (1.00s)
+[2025-12-12 16:32:55] [INFO] Department Billing: Patient 3 arrived
+[2025-12-12 16:32:55] [INFO] Department Billing: Treating Patient 3 (waited 0.00s)
+[2025-12-12 16:32:55] [INFO] Patient 7 completed all treatments
+[2025-12-12 16:32:56] [INFO] Department Billing: Patient 3 treatment complete (1.00s)
+[2025-12-12 16:32:56] [INFO] Department Billing: Patient 4 arrived
+[2025-12-12 16:32:56] [INFO] Department Billing: Treating Patient 4 (waited 0.00s)
+[2025-12-12 16:32:56] [INFO] Patient 3 completed all treatments
+[2025-12-12 16:32:57] [INFO] Department Pharmacy: Patient 11 treatment complete (2.00s)
+[2025-12-12 16:32:57] [INFO] Sent Patient 11 to Billing department
+[2025-12-12 16:32:58] [INFO] Department Billing: Patient 4 treatment complete (2.00s)
+[2025-12-12 16:32:58] [INFO] Department Billing: Patient 10 arrived
+[2025-12-12 16:32:58] [INFO] Department Billing: Treating Patient 10 (waited 0.00s)
+[2025-12-12 16:32:58] [INFO] Patient 4 completed all treatments
+[2025-12-12 16:33:00] [INFO] Department Billing: Patient 10 treatment complete (2.00s)
+[2025-12-12 16:33:00] [INFO] Department Billing: Patient 5 arrived
+[2025-12-12 16:33:00] [INFO] Department Billing: Treating Patient 5 (waited 0.00s)
+[2025-12-12 16:33:00] [INFO] Patient 10 completed all treatments
+[2025-12-12 16:33:02] [INFO] Department Billing: Patient 5 treatment complete (2.00s)
+[2025-12-12 16:33:02] [INFO] Department Billing: Patient 11 arrived
+[2025-12-12 16:33:02] [INFO] Department Billing: Treating Patient 11 (waited 0.00s)
+[2025-12-12 16:33:02] [INFO] Patient 5 completed all treatments
+[2025-12-12 16:33:03] [INFO] Department Billing: Patient 11 treatment complete (1.00s)
+[2025-12-12 16:33:03] [INFO] Patient 11 completed all treatments
+[2025-12-12 16:33:03] [INFO] All patients completed treatment
+[2025-12-12 16:33:03] [INFO] Message scheduler finished
+[2025-12-12 16:33:05] [ERROR] Failed to destroy message queue: Invalid argument
+[2025-12-12 16:33:05] [INFO] Message queue destroyed
+[2025-12-12 16:33:05] [INFO] Shared memory destroyed
+[2025-12-12 16:33:05] [INFO] Shared memory destroyed
+[2025-12-12 16:33:05] [INFO] Destroyed semaphore /sem_emergency
+[2025-12-12 16:33:05] [ERROR] Failed to destroy message queue: Invalid argument
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_emergency: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy message queue: Invalid argument
+[2025-12-12 16:33:05] [ERROR] Failed to destroy message queue: Invalid argument
+[2025-12-12 16:33:05] [ERROR] Failed to destroy message queue: Invalid argument
+[2025-12-12 16:33:05] [INFO] Destroyed semaphore /sem_opd
+[2025-12-12 16:33:05] [INFO] Shared memory destroyed
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_opd: No such file or directory
+[2025-12-12 16:33:05] [INFO] Shared memory destroyed
+[2025-12-12 16:33:05] [INFO] Shared memory destroyed
+[2025-12-12 16:33:05] [INFO] Shared memory destroyed
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_emergency: No such file or directory
+[2025-12-12 16:33:05] [INFO] Destroyed semaphore /sem_radiology
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_radiology: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_emergency: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_emergency: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_emergency: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_opd: No such file or directory
+[2025-12-12 16:33:05] [INFO] Destroyed semaphore /sem_pharmacy
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_pharmacy: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_opd: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_opd: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_opd: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_radiology: No such file or directory
+[2025-12-12 16:33:05] [INFO] Destroyed semaphore /sem_billing
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_billing: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_radiology: No such file or directory
+
+=== Simulation Ended ===
+
+=== Simulation Ended ===
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_radiology: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_radiology: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_pharmacy: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_pharmacy: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_pharmacy: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_pharmacy: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_billing: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_billing: No such file or directory
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_billing: No such file or directory
+
+=== Simulation Ended ===
+
+=== Simulation Ended ===
+
+=== Simulation Ended ===
+[2025-12-12 16:33:05] [ERROR] Failed to destroy semaphore /sem_billing: No such file or directory
+
+=== Simulation Ended ===
